@@ -1,0 +1,40 @@
+:root {
+    --bar-size: 20%;
+}
+.main-focus {
+    text-align: center;
+    background: darkslategray;
+    width: 100%;
+}
+html {
+    height: 100%;
+    background-color: rgb(35, 60, 60);
+}
+body {
+    background-color: rgb(47, 79, 79);
+    display: flex;
+    height: 100%;
+    margin: 0px;
+    justify-content: center;
+    margin-left: var(--bar-size);
+    margin-right: var(--bar-size);
+    box-shadow: 3px 3px 16px 3px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: white;
+    font-family: helvetica;
+    margin: center;
+    text-align: center;
+}
+.selectors {
+    text-align: center
+}
+select { 
+    font-family: helvetica;
+    border: 1px solid gray;
+    width: 14%;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 16px 3px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
