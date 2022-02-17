@@ -38,3 +38,12 @@ select {
     box-shadow: 3px 3px 16px 3px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
+.code-bank {
+
+    color: white;
+    background-color: black;
+    margin-left: var(--bar-size);
+    margin-right: var(--bar-size);
+    margin-top: 10%;
+
+}
