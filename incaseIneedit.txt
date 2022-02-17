@@ -1,0 +1,7 @@
+ <option value = "Python">Python</option>
+                    <option value = "Mc-Auto-Buyer">MC Auto Buyer</option>
+                    <option value = "Screen-Cordinate-Finder">Screen Cordinate Finder</option>
+      <option value = "C#/Java">C#/Java</option>
+                    <option value = "-empty-">-empty-</option>
+        <option value = "Web Apps">Web Apps</option>
+                    <option value = "DRG-randomizer">DRG Randomizer[WIP]</option>
