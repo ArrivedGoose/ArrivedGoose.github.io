@@ -23,6 +23,6 @@ class Project {
 }
 
 let projects = [
-    new Project("Screen coordinate finder", "this is a deck", PYTHON_PROJECT), 
+    new Project("Screen coordinate finder", "C:\Users\cuttl\hello\My-Website\Projects\MouseCordinateFinder.txt", PYTHON_PROJECT), 
     new Project("Mc Auto Buyer", "this will buy stuff", PYTHON_PROJECT)
 ];
