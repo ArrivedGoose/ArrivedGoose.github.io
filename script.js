@@ -1,3 +1,5 @@
+import { projectsStorage } from "./Projects.js";
+
 const CodeBank = document.getElementById("code-bank");
 const PythonDropdown = document.getElementById("python-dropdown");
 const CsDropdown = document.getElementById("cs-dropdown");
@@ -23,6 +25,32 @@ class Project {
 }
 
 let projects = [
-    new Project("Screen coordinate finder", "C:\Users\cuttl\hello\My-Website\Projects\MouseCordinateFinder.txt", PYTHON_PROJECT), 
-    new Project("Mc Auto Buyer", "this will buy stuff", PYTHON_PROJECT)
+    new Project("Screen coordinate finder", 0, PYTHON_PROJECT), 
+    new Project("Mc Auto Buyer", 1, PYTHON_PROJECT)
 ];
+
+function selectChanged(event) {
+    if (event.target.id == "python-dropdown") {
+        susyBaka(PythonDropdown.children[PythonDropdown.selectedIndex].value);
+    } else if (event.target.id == "") {
+
+    }
+}
+function getProjectByName(name) {
+    for (let _ in projects) {
+        if (projects[_].name == name) {
+            return projects[_];
+        }
+    }
+    return;
+}
+function susyBaka(value) {
+    console.log(value);
+    let project = getProjectByName(value);
+    console.log(projectsStorage[project.fpath]);
+    document.getElementById("code-bank").innerHTML = projectsStorage[project.fpath].replace("\n", "<br>");
+    document.getElementById("code-bank").style = "block";   
+}
+PythonDropdown.addEventListener("change", selectChanged);
+WebAppsDropdown.addEventListener("change", selectChanged);
+CsDropdown.addEventListener("change", selectChanged);

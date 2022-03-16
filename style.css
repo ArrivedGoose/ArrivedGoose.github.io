@@ -39,7 +39,7 @@ select {
     border-radius: 5px;
 }
 #code-bank {
-
+    text-align: left;
     color: white;
     background-color: black;
     margin-left: var(--bar-size);
