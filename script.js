@@ -26,14 +26,18 @@ class Project {
 
 let projects = [
     new Project("Screen coordinate finder", 0, PYTHON_PROJECT), 
-    new Project("Mc Auto Buyer", 1, PYTHON_PROJECT)
+    new Project("HomeWorkCompleter.cs", "monkey", CS_PROJECT),
+    new Project("Estes IP bank", "rick", WEB_APP_PROJECT)
 ];
 
 function selectChanged(event) {
     if (event.target.id == "python-dropdown") {
         susyBaka(PythonDropdown.children[PythonDropdown.selectedIndex].value);
-    } else if (event.target.id == "") {
-
+    } else if (event.target.id == "cs-dropdown") {
+        susyBaka(CsDropdown.children[CsDropdown.selectedIndex].value);
+        console.log("hello")
+    } else if (event.target.id == "web-applications-dropdown") {
+        susyBaka(WebAppsDropdown.children[WebAppsDropdown.selectedIndex].value)
     }
 }
 function getProjectByName(name) {
@@ -48,6 +52,11 @@ function susyBaka(value) {
     console.log(value);
     let project = getProjectByName(value);
     console.log(projectsStorage[project.fpath]);
+    if(project.fpath === "monkey") {
+        document.getElementById("download-png").style = "block";
+    } else if (project.fpath === "rick") {
+        window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
     document.getElementById("code-bank").innerHTML = projectsStorage[project.fpath].replace("\n", "<br>");
     document.getElementById("code-bank").style = "block";   
 }

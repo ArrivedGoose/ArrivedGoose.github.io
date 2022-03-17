@@ -45,5 +45,7 @@ select {
     margin-left: var(--bar-size);
     margin-right: var(--bar-size);
     margin-top: 10%;
+    font-family: url("./Consolas.ttf");
+    font-size: 14px;
 
 }
